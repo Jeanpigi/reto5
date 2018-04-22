@@ -1,0 +1,74 @@
+ html,body{
+  background: lightblue;
+  margin: 0;
+}
+h1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container{
+  height: 90vh;
+  width: 90vw;
+}
+.land{
+  width: 1024px;
+  height: 243px;
+  background-image: url('../img/background.png');
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: 0 auto;
+}
+.jp{
+  width: 166px;
+  height: 171px;
+  left: 0;
+  bottom: 0;
+  position: absolute;
+  overflow: hidden;
+  transition: .3s;
+}
+
+.jp:hover .cabeza{
+  /*esta es para crear la animacion primero el tiempo y segundo el nombre de la animacion*/
+  animation: .5s animacion infinite;
+}
+.jp:hover .ipad{
+  transform: rotate(7deg);
+}
+
+.cuerpo{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.cabeza{
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: .3s;
+}
+.ipad{
+  position: absolute;
+  left: 0;
+  bottom: -20px;
+  transition: .2s;
+}
+
+@keyframes animacion {
+  /*hay dos formas de hacer las
+  la primera es: 0% -50%- 100%
+  la segunda con from to
+  */
+  0%{
+    transform: translateY(0px);
+  }
+  50%{
+    transform: translateY(5px) rotate(2deg);
+  }
+  100%{
+    transform: translateY(0px);
+  }
+}
